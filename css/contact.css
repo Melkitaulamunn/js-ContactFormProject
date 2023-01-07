@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.mainContainer{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#contactForm{
+    width: 50%;
+}
+
+.formRow{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+}
+.formRow label{
+    color: #777;
+}
+.formRow input, .formRow textarea{
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+textarea{
+    resize: none;
+}
+.formRow input:focus, .formRow textarea:focus{
+    outline: none;
+    border: 1px solid rgb(40, 40, 40);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+
+.submitBtnContainer{
+    display: flex;
+    justify-content: center;
+}
+.submitBtnActive{
+    border: none;
+    padding: 8px 50px;
+    background-color: rgb(87, 181, 225);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.submitBtnActive:hover{
+    border-radius: 4px;
+    padding: 8px 70px;
+    box-shadow: 0px 0px 10px 0px rgb(87, 181, 225);
+}
+
+.submitBtnDisabled{
+    border: none;
+    padding: 8px 50px;
+    background-color: rgb(104, 104, 104);
+    color: #fff;
+    font-size: 20px;
+    cursor: not-allowed;
+}
+
+.inputError{
+    font-size: 12px;
+    color: orangered;
+}
+
+#responseContainer{
+    display: none;
+}
+.responseSuccess {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    padding: 30px 50px;
+    background-color: rgb(87, 181, 225);
+    border-radius: 5px;
+    color: #fff;
+}
+.responseFail{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    padding: 30px 50px;
+    background-color: orangered;
+    border-radius: 5px;
+    color: #fff;
+}
+#responseText{
+    text-align: center;
+    line-height: 26px;
+}
+#closeResponse{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.closeGif{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

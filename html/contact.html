@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İletişim</title>
+    <link rel="stylesheet" href="../css/contact.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <h1 class="pageTitle">İletişim Formu</h1>
+      <form id="contactForm">
+        <div class="formRow">
+          <label id="nameLabel" for="name">İsim</label>
+          <input id="name" type="text" placeholder="Ör: Harmony" />
+        </div>
+        <div class="formRow">
+          <label id="surnameLabel" for="surname">Soyisim</label>
+          <input id="surname" type="text" placeholder="Ör: Grancer" />
+        </div>
+        <div class="formRow">
+          <label id="emailLabel" for="email">Email</label>
+          <input id="email" type="email" placeholder="Ör: abc@abc.com" />
+          <p class="inputError" id="emailError"></p>
+        </div>
+        <div class="formRow">
+          <label id="messageLabel" for="message">Mesaj</label>
+          <textarea id="message" cols="30" rows="10"></textarea>
+          <p class="inputError" id="messageError"></p>
+        </div>
+        <div class="submitBtnContainer">
+          <button id="submitBtn" class="submitBtnActive" type="submit">
+            Gönder
+          </button>
+        </div>
+      </form>
+      <div id="responseContainer" class="responseSuccess">
+        <div id="closeResponse">
+            <img class="closeGif" src="../assets/closeIcon.gif">
+        </div>
+        <p id="responseText"></p>
+      </div>
+    </div>
+
+    <script src="../js/general.js"></script>
+  </body>
+</html>
